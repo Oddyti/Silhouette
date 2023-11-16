@@ -1,13 +1,14 @@
 @import url(./silhouette/font.css);
 
 :root {
-	--main-color: #2dbfdc;
-	--heigh-light-color: #93e3ee;
-	--strong-color: #1193ad;
-	--link-color: #407bdf;
+	--main-color: #1ea7ac;
+	--heigh-light-color: #43cacf;
+	--strong-color: #1da9ae;
+	--link-color: #1e80ce;
 	--text-color: #111;
-
-    --code-block-bg-color: #e5f6f8;
+	--blockquote-color: #111;
+	--blockquote-bg-color: #f4fafa;
+    --code-block-bg-color: #f0f4f4;
     --code-block-color: #1b2122;
 }
 
@@ -18,7 +19,7 @@ body,
     padding: 20px 30px 100px;
 	background: #fcfcfc;
 	font-family: var(--text-font) !important;
-	font-weight: 400;
+	font-weight: normal;
 	max-width: 1200px;
     min-height: calc(100vh - 6rem);
 	min-width: calc(100vw - 45rem);
@@ -28,7 +29,7 @@ body,
 html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
-	text-rendering: optimizelegibility;
+	text-rendering: geometricPrecision;
 	-webkit-font-smoothing: initial;
 }
 
@@ -39,7 +40,6 @@ h4,
 h5,
 h6 {
 	color: #111;
-	font-family: sans-serif;
 	margin: 1rem 0;
 }
 
@@ -54,7 +54,6 @@ h1 ::before {
 	margin: 0 .3rem;
 	background-color: var(--main-color);
 	color: white;
-	font-family: serif;
 }
 
 h1 {
@@ -68,7 +67,6 @@ h2 ::before {
 	margin: 0 .3rem;
 	background-color: var(--main-color);
 	color: white;
-	font-family: serif;
 }
 
 h2 {
@@ -82,7 +80,6 @@ h3 ::before {
 	margin: 0 .3rem;
 	background-color: var(--main-color);
 	color: white;
-	font-family: serif;
 }
 
 h3 {
@@ -119,7 +116,7 @@ p {
 /* 超链接 */
 a,
 .md-def-url {
-	color: var(--main-color);
+	color: var(--link-color);
 	text-decoration: none;
 }
 
@@ -131,6 +128,7 @@ a:hover {
 #write table {
 	margin: 0 0 1.5rem 1.5rem;
 	padding: 0 0;
+	width: 90%;
 	text-align: center;
 }
 
@@ -174,8 +172,9 @@ table tbody+tbody {
 /* 代码块边框 */
 .md-fences {
 	margin: 0 1.5rem;
-    padding: 5px 5px;
-	font-size: 1rem;
+    padding: 10px 10px;
+	border-radius: 6px;
+	font-size: 0.95rem;
     background-color: var(--code-block-bg-color);
     color: var(--code-block-color);
 }
@@ -194,16 +193,18 @@ blockquote {
 	margin: 0 1.5rem;
     padding: 5px 5px;
 	border-left: 3px solid var(--main-color);
+	background-color: var(--blockquote-bg-color);
 }
 
 blockquote p {
 	line-height: 1.5rem;
-	color: #6f6f6f;
+	color: var(--blockquote-color);
 }
 
 /* 高亮 */
 mark {
 	background-color: var(--heigh-light-color);
+	color: white;
 }
 
 /* 强调 */
@@ -218,6 +219,11 @@ ol,
 ul {
 	padding-left: 1em;
 	line-height: 1.5rem;
+	margin: 0 1.5rem;
+}
+
+ol {
+	margin: 0 2rem;
 }
 
 ul>li>ul>li {
@@ -229,20 +235,20 @@ ul>li>ul>li>ul>li {
 }
 
 /* 任务 */
-.task-list {
+/* .task-list {
 	padding-left: 0;
 }
 
 .task-list-item {
-	padding-left: 2.125rem;
+	padding-left: 2.5rem;
 }
 
 .task-list-item input {
 	top: 3px;
 
-}
+} */
 
-.task-list-item input:before {
+/* .task-list-item input:before {
 	content: "";
 	display: inline-block;
 	width: 1rem;
@@ -258,11 +264,10 @@ ul>li>ul>li>ul>li {
 .task-list-item input:checked:before,
 .task-list-item input[checked]:before {
 	content: '\25FC';
-	/*◘*/
 	font-size: 0.8125rem;
 	line-height: 0.9375rem;
 	margin-top: -1rem;
-}
+} */
 
 /* Chrome 29+ */
 @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
@@ -319,6 +324,7 @@ p.mathjax-block,
 
 .md-image>img {
 	margin-top: 2px;
+	border-radius: 6px;
 }
 
 .md-image>.md-meta:first-of-type:before {
