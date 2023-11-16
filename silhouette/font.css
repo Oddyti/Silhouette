@@ -1,0 +1,21 @@
+@font-face {
+    font-family: '0xProto';
+    src: local('0xProto-Regular'),
+    url('./0xProto-Regular.ttf') format('ttf');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*快速自定义配置*/
+:root {
+    --monospace: "0xProto",Menlo, "Ubuntu Mono", Consolas, "PingFang SC Medium", "Microsoft Yahei", sans-serif; /*代码字体*/
+    --text-font: var(--monospace); /*正文字体*/
+    --title-font: var(--monospace); /*标题字体*/
+    --latex-font: var(--monospace); /*LaTeX字体(不含英语)*/
+    --text-line-height: 1.6; /*正文行间距*/
+    --code-line-height: 1.6; /*代码块行间距*/
+    --p-spacing: 0.8rem; /*段间距*/
+    --text-size: 16px;
+}
