@@ -47,7 +47,7 @@ html {
 	font-size: 16px;
 }
 
-h1 ::before {
+#write h1::before {
 	content: "H1";
 	border-radius: .3rem;
 	padding: 0 .3rem;
@@ -56,11 +56,12 @@ h1 ::before {
 	color: white;
 }
 
-h1 {
+h1,
+#write h1 {
 	font-size: 1.8rem;
 }
 
-h2 ::before {
+h2::before {
 	content: "H2";
 	border-radius: .3rem;
 	padding: 0 .3rem;
@@ -73,7 +74,7 @@ h2 {
 	font-size: 1.6rem;
 }
 
-h3 ::before {
+h3::before {
 	content: "H3";
 	border-radius: .3rem;
 	padding: 0 .3rem;
@@ -186,6 +187,7 @@ code {
 	border-radius: 4px;
 	padding: 0rem .4rem;
 	margin: 0 .2rem;
+    white-space: pre-wrap;
 }
 
 /* 引用 */
