@@ -337,6 +337,7 @@ p.mathjax-block,
 .md-image>img {
 	margin-top: 2px;
 	border-radius: 6px;
+	max-width: 75%;
 }
 
 .md-image>.md-meta:first-of-type:before {
