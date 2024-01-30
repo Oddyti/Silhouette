@@ -7,10 +7,19 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'LXGW';
+    src: local('LXGWWenKai-Regular'),
+    url('./LXGWWenKai-Regular.ttf') format('ttf');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /*快速自定义配置*/
 :root {
-    --monospace: "0xProto",Menlo, "Ubuntu Mono", Consolas, "PingFang SC Medium", "Microsoft Yahei", sans-serif; /*代码字体*/
+    --monospace: "0xProto","LXGW",Menlo, "Ubuntu Mono", Consolas, "PingFang SC Medium", "Microsoft Yahei", sans-serif; /*代码字体*/
     --text-font: var(--monospace); /*正文字体*/
     --title-font: var(--monospace); /*标题字体*/
     --latex-font: var(--monospace); /*LaTeX字体(不含英语)*/

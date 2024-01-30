@@ -37,8 +37,13 @@ html {
 
 /* Print set */
 @media print {
-	html {
-		font-size: 12px;
+	html,
+	body {
+		font-size: 13px;
+		padding-left: 0;
+		margin-left: 0;
+		width: 100%;
+		max-width: 100%;
 	}
 }
 
@@ -66,7 +71,7 @@ h1 {
 	line-height: 2.2rem;
 }
 
-h2::before {
+#write h2::before {
 	content: "H2";
 	border-radius: .3rem;
 	padding: 0 .3rem;
@@ -80,7 +85,7 @@ h2 {
 	line-height: 2rem;
 }
 
-h3::before {
+#write h3::before {
 	content: "H3";
 	border-radius: .3rem;
 	padding: 0 .3rem;
